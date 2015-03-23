@@ -1,0 +1,8 @@
+Jebel Ali	2
+Bur Dubai	3
+Fujairah	1
+Sharjah	4
+Rashidiya	1
+Academic City	1
+Deira	2
+Ajman	3
