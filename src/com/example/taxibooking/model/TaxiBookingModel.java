@@ -10,16 +10,11 @@ import com.example.taxibooking.interfaces.Observer;
 import com.example.taxibooking.interfaces.Subject;
 import com.example.taxibooking.view.TaxiBookingGUI;
 
-public class TaxiBookingModel  {
+public class TaxiBookingModel  {	
 	
-	private List<String> taxis = new LinkedList<String>();
-	private List<Passenger> passengers = new LinkedList<Passenger>();
-	
-	
-	public TaxiBookingModel(List<String> taxis, List<Passenger> passengers)
+	public TaxiBookingModel()
 	{
-		this.taxis = taxis;
-		this.passengers = passengers;
+		
 	}
 	
 	public void StartBooking(JTextArea[] workerwindow, JTextArea[] inventory)
@@ -29,6 +24,8 @@ public class TaxiBookingModel  {
 		window1.start();
 		Thread window2 = new Thread(new Worker("Worker2", obs, workerwindow, inventory));
 		window2.start();
+		Thread window3 = new Thread(new Worker("Worker3", obs, workerwindow, inventory));
+		window3.start();
 	}
 	
 	

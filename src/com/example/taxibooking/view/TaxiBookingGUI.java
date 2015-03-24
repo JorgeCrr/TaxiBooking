@@ -10,6 +10,8 @@ import java.awt.Container;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -19,6 +21,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import com.example.taxibooking.interfaces.Observer;
+import com.example.taxibooking.logging.TaxiBookingLogger;
 import com.example.taxibooking.model.TaxiBookingModel;
 import com.example.taxibooking.model.Worker;
 
@@ -45,7 +48,14 @@ public class TaxiBookingGUI extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(100,600);
         setLocation(10,20);
- 
+        addWindowListener(new WindowAdapter() {		
+            @Override
+            public void windowClosing(WindowEvent e)
+            {
+                TaxiBookingLogger.getInstance().closeLog();
+                e.getWindow().dispose();
+            }
+        });
         
         //add button panel and result field to the content pane
         Container contentPane = getContentPane();
@@ -62,23 +72,23 @@ public class TaxiBookingGUI extends JFrame {
 	private JPanel createNorthPanel() {
         //north panel shows the button to start processing
         processButton = new JButton("Start Booking");
-        JPanel northPanel = new JPanel(new GridLayout (1,2));
+        JPanel northPanel = new JPanel(new GridLayout (1,4));
         northPanel.add(new JLabel("Window 1"));
         northPanel.add(processButton);
         northPanel.add(new JLabel("Window 2"));
+        northPanel.add(new JLabel("Window 3"));
         return northPanel;
     }
 	
     private JPanel createCustPanel() {
     	//cheating - know there are 6 customers
-    	JPanel custPanel = new JPanel(new GridLayout (1,2));
-    	workerwindow  = new JTextArea [2];
-		for (int i = 0; i < 2; i++) {
+    	JPanel custPanel = new JPanel(new GridLayout (1,3));
+    	workerwindow  = new JTextArea [3];
+		for (int i = 0; i < 3; i++) {
 			workerwindow [i]= new JTextArea(15,80);
 			//monospaced allows nice tabular layout
 			workerwindow[i].setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
-			workerwindow [i].setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.LIGHT_GRAY));
-			
+			workerwindow [i].setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.LIGHT_GRAY));			
 			custPanel.add(workerwindow[i]);
 		}
 		return custPanel;

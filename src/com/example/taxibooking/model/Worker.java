@@ -66,8 +66,7 @@ public class Worker implements Runnable, Observer {
 			}			
 			passenger = obs.getNextPass();
 		}
-		TaxiBookingLogger.getInstance().writeToLog(name + " is closing");
-		TaxiBookingLogger.getInstance().closeLog();
+		TaxiBookingLogger.getInstance().writeToLog(name + " is closing");		
 	}
 
 	@Override
@@ -82,9 +81,13 @@ public class Worker implements Runnable, Observer {
 			{				
 				workerwindow[0].setText(temp);
 			}
-			else
+			else if(name.equalsIgnoreCase("Worker2"))
 			{				
 				workerwindow[1].setText(temp);
+			}
+			else
+			{
+				workerwindow[2].setText(temp);
 			}
 			
 			inventory[0].setText(obs.getPassengerQueue());

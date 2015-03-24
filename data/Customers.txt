@@ -6,3 +6,5 @@ Rashidiya	1
 Academic City	6
 Deira	2
 Ajman	3
+Internet City	5
+Jumeirah	4

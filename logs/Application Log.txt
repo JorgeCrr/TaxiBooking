@@ -1,29 +1,37 @@
 Taxi allocation started
 Worker1 is active
 Worker2 is active
-Worker1 : Destination : Jebel Ali
-Passengers : 2
-Taxi : QWWEYE
+Worker3 is active
 Worker2 : Destination : Bur Dubai
 Passengers : 3
-Taxi : DSJKFJ
-Worker1 : Destination : Fujairah
+Taxi : QWWEYE
+Worker3 : Destination : Fujairah
 Passengers : 3
-Taxi : SDFLK
-Worker2 : Destination : Sharjah
+Taxi : DSJKFJ
+Worker1 : Destination : Jebel Ali
+Passengers : 2
+Taxi : VXBCV
+Worker1 : Destination : Sharjah
 Passengers : 4
-Taxi : IORTU
+Taxi : SDFLK
 Worker2 : Destination : Rashidiya
 Passengers : 1
-Taxi : VXBCV
-Worker1 : Destination : Academic City
+Taxi : MBNVC
+Worker3 : Destination : Academic City
 Passengers : 6
 Taxi : Sorry no Taxi available
-Worker2 : Destination : Deira
+Worker1 : Destination : Deira
 Passengers : 2
-Taxi : MBNVC
-Worker1 : Destination : Ajman
+Taxi : IORTU
+Worker3 : Destination : Ajman
 Passengers : 3
 Taxi : KJDHKG
-Worker1 is closing
+Worker2 : Destination : Internet City
+Passengers : 5
+Taxi : Sorry no Taxi available
+Worker1 : Destination : Jumeirah
+Passengers : 4
+Taxi : DHGFHG
+Worker3 is closing
 Worker2 is closing
+Worker1 is closing
