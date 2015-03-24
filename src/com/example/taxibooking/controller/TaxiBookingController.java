@@ -4,6 +4,7 @@ package com.example.taxibooking.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.example.taxibooking.logging.TaxiBookingLogger;
 import com.example.taxibooking.model.DataQueue;
 import com.example.taxibooking.model.TaxiBookingModel;
 import com.example.taxibooking.model.Worker;
@@ -30,6 +31,7 @@ public class TaxiBookingController {
 	        	view.getInventory()[0].setText(obs.getPassengerQueue());
 	        	view.getInventory()[1].setText(obs.getTaxiQueue());
 	        	view.disableProcessButton();
+	        	TaxiBookingLogger.getInstance().writeToLog("Taxi allocation started");
 	    		model.StartBooking(view.getWorkerwindow(), view.getInventory());	    		
 	        }
 	    }

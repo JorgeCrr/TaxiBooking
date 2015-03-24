@@ -7,18 +7,19 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.example.taxibooking.infos.Passenger;
+import com.example.taxibooking.infos.Taxi;
 import com.example.taxibooking.interfaces.Observer;
 import com.example.taxibooking.interfaces.Subject;
 
 public class DataQueue implements Subject{
 
-	List<String> taxis = new LinkedList<String>();
+	List<Taxi> taxis = new LinkedList<Taxi>();
 	private List<Observer> registeredObservers = new LinkedList<Observer>();
-	public List<String> getTaxis() {
+	public List<Taxi> getTaxis() {
 		return taxis;
 	}
 
-	public void setTaxis(List<String> taxis) {
+	public void setTaxis(List<Taxi> taxis) {
 		this.taxis = taxis;
 	}
 
@@ -37,15 +38,17 @@ public class DataQueue implements Subject{
 	{
 		try {
 			sc = new Scanner(new FileInputStream("data/Taxis.txt"), "UTF-8");
-			while (sc.hasNextLine()) {			
-				taxis.add(sc.nextLine().trim());
+			while (sc.hasNextLine()) {		
+				String line = sc.nextLine();
+				String[] data = line.split("\t");
+				taxis.add(new Taxi(data[0], Integer.parseInt(data[1])));
 			}
 			
 			sc = new Scanner(new FileInputStream("data/Customers.txt"), "UTF-8");
 			while (sc.hasNextLine()) {
 				String line = sc.nextLine();
 				String[] data = line.split("\t");
-				passengers.add(new Passenger(data[0], data[1]));
+				passengers.add(new Passenger(data[0], Integer.parseInt(data[1])));
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -82,26 +85,33 @@ public class DataQueue implements Subject{
 		return passengers.remove(0);		
 	}
 	
-	public String searchfortax()
+	public Taxi searchfortax(int numberofPass)
 	{
 		if(taxis.size() == 0)
-			return "";
-		return taxis.get(0);
+			return null;
+		for(Taxi taxi : taxis)
+		{
+			if (taxi.getCapacity() >= numberofPass)
+				return taxi;
+		}
+		return new Taxi("Sorry no Taxi available", 0);
 	}
 	
-	public  void assignTaxi()
+	public  void assignTaxi(Taxi taxi)
 	{
-		if(!taxis.isEmpty())		
-		taxis.remove(0);
-		notifyObservers(); 		
+		if(!taxis.isEmpty())	
+		{	
+			taxis.remove(taxi);			
+			notifyObservers(); 
+		}				
 	}
 	
 	public String getTaxiQueue()
 	{
 		StringBuilder temp = new StringBuilder("Taxis Queue (" + taxis.size() + ")\n\n");
-		for(String taxi : taxis)
+		for(Taxi taxi : taxis)
 		{
-			temp.append(taxi + "\n");
+			temp.append(taxi.getRegistrationNum() + "\n");
 		}
 		return temp.toString();
 	}

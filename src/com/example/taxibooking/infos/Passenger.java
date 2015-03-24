@@ -9,21 +9,21 @@ package com.example.taxibooking.infos;
  */
 public class Passenger {
 	
-	public Passenger(String dest, String count)
+	public Passenger(String dest, int count)
 	{
 		this.count = count;
 		destination = dest;
 	}
 
-	private String count;
+	private int count;
 	
 	private String destination;
 
-	public String getCount() {
+	public int getCount() {
 		return count;
 	}
 
-	public void setCount(String count) {
+	public void setCount(int count) {
 		this.count = count;
 	}
 

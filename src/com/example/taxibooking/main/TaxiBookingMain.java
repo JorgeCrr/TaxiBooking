@@ -42,7 +42,7 @@ public class TaxiBookingMain {
 			while (sc.hasNextLine()) {
 				String line = sc.nextLine();
 				String[] data = line.split("\t");
-				passengers.add(new Passenger(data[0], data[1]));
+				passengers.add(new Passenger(data[0], Integer.parseInt(data[1])));
 			}
 			
 		} catch (FileNotFoundException e) {

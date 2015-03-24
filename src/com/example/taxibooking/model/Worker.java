@@ -9,8 +9,10 @@ import java.util.List;
 import javax.swing.JTextArea;
 
 import com.example.taxibooking.infos.Passenger;
+import com.example.taxibooking.infos.Taxi;
 import com.example.taxibooking.interfaces.Observer;
 import com.example.taxibooking.interfaces.Subject;
+import com.example.taxibooking.logging.TaxiBookingLogger;
 
 /**
  * @author Jorge
@@ -22,7 +24,7 @@ public class Worker implements Runnable, Observer {
     private JTextArea [] inventory ;
     private String name;
     private Passenger passenger;
-	private String taxi = " ";
+	private Taxi taxi = new Taxi("", 0);
 	private DataQueue obs;
 	private boolean workdone = false;
 	
@@ -39,20 +41,21 @@ public class Worker implements Runnable, Observer {
 	@Override
 	public void run() {
 		try {
+			TaxiBookingLogger.getInstance().writeToLog(name + " is active");
 			Thread.sleep(2000);
 		} catch (InterruptedException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		passenger = obs.getNextPass();
-		while(passenger != null && taxi != "")
+		while(passenger != null && taxi != null)
 		{
 			synchronized (obs) {			
-			taxi = obs.searchfortax();
-			if(taxi != "")
+			taxi = obs.searchfortax(passenger.getCount());
+			if(taxi != null)
 			{
 				workdone = true;
-				obs.assignTaxi();
+				obs.assignTaxi(taxi);
 			}
 			}
 			try {				
@@ -63,6 +66,8 @@ public class Worker implements Runnable, Observer {
 			}			
 			passenger = obs.getNextPass();
 		}
+		TaxiBookingLogger.getInstance().writeToLog(name + " is closing");
+		TaxiBookingLogger.getInstance().closeLog();
 	}
 
 	@Override
@@ -72,7 +77,7 @@ public class Worker implements Runnable, Observer {
 		{
 			String temp = "Destination : "+ passenger.getDestination() + "\n"
 					+ "Passengers : " + passenger.getCount() + "\n"
-					+ "Taxi : " + taxi;
+					+ "Taxi : " + taxi.getRegistrationNum();
 			if(name.equalsIgnoreCase("Worker1"))
 			{				
 				workerwindow[0].setText(temp);
@@ -84,6 +89,7 @@ public class Worker implements Runnable, Observer {
 			
 			inventory[0].setText(obs.getPassengerQueue());
 			inventory[1].setText(obs.getTaxiQueue());
+			TaxiBookingLogger.getInstance().writeToLog(name + " : " + temp);
 		}
 		workdone =false;
 	}
