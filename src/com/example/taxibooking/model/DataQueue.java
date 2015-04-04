@@ -15,6 +15,13 @@ public class DataQueue implements Subject{
 
 	List<Taxi> taxis = new LinkedList<Taxi>();
 	private List<Observer> registeredObservers = new LinkedList<Observer>();
+	/**getter for registered observers used for junit
+	 * @return the registeredObservers
+	 */
+	public List<Observer> getRegisteredObservers() {
+		return registeredObservers;
+	}
+
 	public List<Taxi> getTaxis() {
 		return taxis;
 	}
