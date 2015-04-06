@@ -99,7 +99,7 @@ public class Worker implements Runnable, Observer {
 					+ passenger.getDestination() + "\n" + " Passengers: "
 					+ passenger.getCount() + "\n" + " Taxi: "
 					+ taxi.getRegistrationNum();
-			Logger.getInstance().writeToLog("\n" + temp);
+			Logger.getInstance().addtoLog("\n" + temp);
 
 			// Updates the worker windows display
 			if (name.equalsIgnoreCase("Window 1")) {
@@ -110,11 +110,7 @@ public class Worker implements Runnable, Observer {
 				displayWindows[2].setText(temp);
 			} else if (name.equalsIgnoreCase("Window 4")) {
 				displayWindows[3].setText(temp);
-			} else if (name.equalsIgnoreCase("Window 5")) {
-				displayWindows[3].setText(temp);
-			} else if (name.equalsIgnoreCase("Window 6")) {
-				displayWindows[3].setText(temp);
-			}
+			} 
 
 			// Progress Unallocated Passenger groups
 			view.setProgressPassengerGroupsUnAllocated(obs

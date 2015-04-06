@@ -10,6 +10,7 @@ import java.io.IOException;
 public class Logger {
 
 	private static Logger instance = new Logger();
+	private StringBuilder buffer = new StringBuilder("");
 	private FileWriter filewriter = null;
 		
 	/**
@@ -17,11 +18,7 @@ public class Logger {
 	 * 
 	 */
 	private Logger() {
-		try {
-			filewriter = new FileWriter("logs\\ApplicationLog.txt");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 
 	public static Logger getInstance() {
@@ -29,22 +26,24 @@ public class Logger {
 	}
 
 	/**
-	 * Writes to the log file
+	 * Writes to the log buffer
 	 * 
 	 */
-	public void writeToLog(String line) {
-		try {
-			filewriter.append(line.replaceAll("\n", "\r\n") + "\n");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}		
+	public void addtoLog(String line) {
+		buffer.append(line.replaceAll("\n", "\r\n") + "\n");
 	}
 
 	/**
-	 * Closes the log file
+	 * Writes the buffer to file
 	 * 
 	 */
-	public void closeLog() {
+	public void commitLog() {
+		try {
+			filewriter = new FileWriter("logs\\ApplicationLog.txt");
+			filewriter.append(buffer.toString());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 		if (filewriter != null) {
 			try {
 				filewriter.close();

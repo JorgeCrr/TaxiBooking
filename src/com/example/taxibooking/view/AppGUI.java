@@ -99,7 +99,7 @@ public class AppGUI extends JFrame {
 			pack();
 			setVisible(true);
 		} catch (Exception ex) {
-			final JPanel panel = new JPanel();
+			 JPanel panel = new JPanel();
 			JOptionPane.showMessageDialog(panel,
 					"Application GUI could not be initialisation error",
 					"Taxi Booking System", JOptionPane.ERROR_MESSAGE);
@@ -145,7 +145,7 @@ public class AppGUI extends JFrame {
 
 		cbWorkerWindows = new JComboBox();
 		cbWorkerWindows.setModel(new DefaultComboBoxModel(new String[] { "1",
-				"2", "3", "4", "5", "6" }));
+				"2", "3", "4" }));
 		cbWorkerWindows.setSelectedIndex(1);
 		panelButtons.add(cbWorkerWindows);
 
@@ -246,9 +246,9 @@ public class AppGUI extends JFrame {
 				TitledBorder.LEADING, TitledBorder.TOP, null, new Color(64, 64,
 						64)));
 		windowPanel.setPreferredSize(new Dimension(660, 360));
-		displayWindows = new JTextArea[6];
-		for (int i = 0; i < 6; i++) {
-			displayWindows[i] = new JTextArea(6, 45);
+		displayWindows = new JTextArea[4];
+		for (int i = 0; i < 4; i++) {
+			displayWindows[i] = new JTextArea(9, 45);
 			displayWindows[i]
 					.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 12));
 			displayWindows[i].setBorder(BorderFactory.createMatteBorder(1, 1,

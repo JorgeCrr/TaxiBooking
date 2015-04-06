@@ -102,15 +102,12 @@ public class DataQueueTest {
 	public void testGetTaxiQueue() {
 		
 		String output = queue.getTaxiQueue();
-		
-		System.out.print("yyyyyyyyy\n" +output);
-		
 		assertNotNull("No Taxi queue returned ", output);
-		assertTrue("Wrong taxi queue returned ", output.equals(" REMAINING (3)\n\n Destination         Passenger(s)" +
-																" -----------         ------------" +
-																" Sharjah             3  " +
-																" Dubai               5  " +
-																" Abu Dhabi           4  "));
+		assertTrue("Wrong taxi queue returned ", output.equals(" REMAINING (3)\n\n Reg No.   Seats" +
+				"\n -------   -----" +
+				"\n HJJDHJD   4  " +
+				"\n UDSUSJ    3  " +
+				"\n JKKJH     5  "));		
 	}
 
 	/**
@@ -120,12 +117,12 @@ public class DataQueueTest {
 	public void testGetPassengerGroupsQueue() {
 		
 		String output = queue.getPassengerGroupsQueue();
-		
-		
-		System.out.print(output);
-		
 		assertNotNull("No Passenger queue returned ", output);
-		assertTrue("Wrong Passenger queue returned ", output.equals("Passengers Queue (3)\n\nSharjah   3\nDubai   5\nAbu Dhabi   4\n"));
+		assertTrue("Wrong Passenger queue returned ", output.equals(" REMAINING (3)\n\n Destination         Passenger(s)\n" +
+																" -----------         ------------" +
+																"\n Sharjah             3  " +
+																"\n Dubai               5  " +
+																"\n Abu Dhabi           4  "));
 	}
 
 	/**

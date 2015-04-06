@@ -42,13 +42,13 @@ public class ProgressTimer {
 				DateFormat dateFormat = new SimpleDateFormat(
 						"yyyy/MM/dd HH:mm:ss");
 				Date date = new Date();
-				// Writes status to logger object
-				Logger.getInstance().writeToLog(
+				// Writes status to log buffer
+				Logger.getInstance().addtoLog(
 						"\n\n==== Booking Simulation Closed at "
 								+ dateFormat.format(date) + " ====\n");
 				// Writes the details of the logger to a text file an closes the
 				// file
-				Logger.getInstance().closeLog();
+				Logger.getInstance().commitLog();
 				// Updates the GUI controls
 				view.enableStartBookingButton();
 				view.enableCbProcessingSpeed();

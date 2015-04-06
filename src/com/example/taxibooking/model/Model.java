@@ -44,12 +44,13 @@ public class Model {
 			view.disableCbWorkerWindows();
 			view.disableCbProcessingSpeed();
 			view.disableSimulationLogButton();
+			clearWindows(view);
 			// Write status to the application log
 			DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 			Date date = new Date();
 			view.setProgressStatus("  Processing bookings - started at "
 					+ dateFormat.format(date));
-			Logger.getInstance().writeToLog(
+			Logger.getInstance().addtoLog(
 					"==== Booking Simulation Started at "
 							+ dateFormat.format(date) + " ====\n");
 			view.setProgressTotalTaxis("  Total Taxi(s): " + obs.taxis.size());
@@ -67,7 +68,7 @@ public class Model {
 			new ProgressTimer(obs, view);
 
 		} catch (Exception ex) {
-			final JPanel panel = new JPanel();
+			 JPanel panel = new JPanel();
 			JOptionPane.showMessageDialog(panel, ex.getMessage(),
 					"Taxi Booking System", JOptionPane.ERROR_MESSAGE);
 			view.dispatchEvent(new WindowEvent(view, WindowEvent.WINDOW_CLOSING));
@@ -83,4 +84,14 @@ public class Model {
 		java.awt.Desktop.getDesktop().edit(file);
 	}
 
+	/**
+	 * resets the windows for a new run
+	 */
+	private void clearWindows(AppGUI view)
+	{
+		view.getWorkerwindow()[0].setText("");
+		view.getWorkerwindow()[1].setText("");
+		view.getWorkerwindow()[2].setText("");
+		view.getWorkerwindow()[3].setText("");
+	}
 }

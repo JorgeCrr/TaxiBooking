@@ -46,7 +46,7 @@ public class Controller {
 					model.ShowBookingSimulationLog();
 				}
 			} catch (Exception ex) {
-				final JPanel panel = new JPanel();
+				 JPanel panel = new JPanel();
 				JOptionPane.showMessageDialog(panel, ex.getMessage(),
 						"Taxi Booking System", JOptionPane.ERROR_MESSAGE);
 				view.dispatchEvent(new WindowEvent(view,
