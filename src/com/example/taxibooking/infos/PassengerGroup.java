@@ -1,16 +1,12 @@
-/**
- * 
- */
 package com.example.taxibooking.infos;
-
-/**
- * @author Jorge
+/**  
+ * Passenger Group Data Access Object
  *
  */
-public class Passenger {
-	
-	public Passenger(String dest, int count)
-	{
+
+public class PassengerGroup {
+
+	public PassengerGroup(String dest, int count) {
 		this.count = count;
 		destination = dest;
 	}

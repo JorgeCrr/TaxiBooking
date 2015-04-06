@@ -1,0 +1,582 @@
+==== Booking Simulation Started at 2015/04/06 16:47:20 ====
+
+
+ Window 1
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: QWWEYE
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: SDFLK
+
+ Window 3
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 2
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: KJDHKG
+
+ Window 3
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: MBNVC
+
+ Window 4
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: KJDHKG
+
+ Window 2
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: SDFLK
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: DHGFHG
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: IOJMJK
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: BBTT23
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: QWWEYE
+
+ Window 3
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 4
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 2
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: QWWEYE
+
+ Window 3
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: KJDHKG
+
+ Window 2
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: DHGFHG
+
+ Window 4
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: SDFLK
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: IOJMJK
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: BBTT23
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: QWWEYE
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 3
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: IORTU
+
+ Window 2
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: KJDHKG
+
+ Window 4
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: DHGFHG
+
+ Window 3
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: IOJMJK
+
+ Window 4
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: SDFLK
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: BBTT23
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: QWWEYE
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 4
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: KJDHKG
+
+ Window 3
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: DHGFHG
+
+ Window 2
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 3
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: IOJMJK
+
+ Window 2
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: SDFLK
+
+ Window 4
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: BBTT23
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: QWWEYE
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 4
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: DHGFHG
+
+ Window 2
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: IOJMJK
+
+ Window 3
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: BBTT23
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 4
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: DSJKFJ
+
+ Window 3
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: SDFLK
+
+ Window 2
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: KJDHKG
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: DHGFHG
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: IOJMJK
+
+ Window 4
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: BBTT23
+
+ Window 3
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 2
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: QWWEYE
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: VXBCV
+
+ Window 3
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: SDFLK
+
+ Window 4
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: KJDHKG
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 4
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: DHGFHG
+
+ Window 2
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: IOJMJK
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: BBTT23
+
+ Window 2
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: QWWEYE
+
+ Window 3
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: DSJKFJ
+
+ Window 4
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 4
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: SDFLK
+
+ Window 2
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: MBNVC
+
+ Window 3
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: KJDHKG
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: IORTU
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: DHGFHG
+
+ Window 2
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: IOJMJK
+
+ Window 3
+ ---------
+ Destination: Jebel Ali
+ Passengers: 2
+ Taxi: BBTT23
+
+ Window 5
+ ---------
+ Destination: Bur Dubai
+ Passengers: 3
+ Taxi: QWWEYE
+
+ Window 4
+ ---------
+ Destination: Fujairah
+ Passengers: 3
+ Taxi: DSJKFJ
+
+ Window 2
+ ---------
+ Destination: Sharjah
+ Passengers: 4
+ Taxi: SDFLK
+
+ Window 3
+ ---------
+ Destination: Rashidiya
+ Passengers: 1
+ Taxi: VXBCV
+
+ Window 5
+ ---------
+ Destination: Academic City
+ Passengers: 6
+ Taxi: Taxi unavailable for passenger group
+
+ Window 4
+ ---------
+ Destination: Deira
+ Passengers: 2
+ Taxi: MBNVC
+
+ Window 3
+ ---------
+ Destination: Internet City
+ Passengers: 5
+ Taxi: KJDHKG
+
+ Window 2
+ ---------
+ Destination: Ajman
+ Passengers: 3
+ Taxi: IORTU
+
+ Window 5
+ ---------
+ Destination: Jumeirah
+ Passengers: 4
+ Taxi: DHGFHG
+
+ Window 4
+ ---------
+ Destination: Jebel Ali
+ Passengers: 3
+ Taxi: IOJMJK
+
+ Window 3
+ ---------
+ Destination: Deira
+ Passengers: 4
+ Taxi: DSJKFJ
+
+
+==== Booking Simulation Closed at 2015/04/06 16:47:44 ====
+

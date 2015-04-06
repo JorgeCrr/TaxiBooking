@@ -1,3 +1,7 @@
+/**  
+ * Taxi Data Access Object
+ *
+ */
 package com.example.taxibooking.infos;
 
 public class Taxi {

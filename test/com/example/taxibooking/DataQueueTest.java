@@ -3,7 +3,9 @@
  */
 package com.example.taxibooking;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,10 +14,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.example.taxibooking.infos.Passenger;
+import com.example.taxibooking.infos.PassengerGroup;
 import com.example.taxibooking.infos.Taxi;
 import com.example.taxibooking.model.DataQueue;
-import com.example.taxibooking.model.Worker;
 
 /**
  * @author Jorge
@@ -24,7 +25,7 @@ import com.example.taxibooking.model.Worker;
 public class DataQueueTest {
 
 	private DataQueue queue;
-	private List<Passenger> passengers = new LinkedList<Passenger>();
+	private List<PassengerGroup> passengers = new LinkedList<PassengerGroup>();
 	private List<Taxi> taxis = new LinkedList<Taxi>();	
 	
 	/**initialize data for test cases
@@ -63,18 +64,18 @@ public class DataQueueTest {
 	@Test
 	public void testGetNextPass() {
 		
-		Passenger passenger = queue.getNextPass();
+		PassengerGroup passenger = queue.getNextPass();
 		assertTrue("Wrong next passenger fetched ", passengers.get(0).getDestination().equals(passenger.getDestination()));
 		assertTrue("Wrong next passenger fetched ", passengers.get(0).getCount() == passenger.getCount());
 	}
 
 	/**
-	 * Test method for searchfortax
+	 * Test method for searchfortaxi
 	 */
 	@Test
-	public void testSearchfortax() {
+	public void testSearchfortaxi() {
 		
-		Taxi taxi = queue.searchfortax(5);
+		Taxi taxi = queue.searchForTaxi(5);
 		assertTrue("Wrong capacity for fetched taxi ", taxis.get(2).getCapacity() == taxi.getCapacity());
 		assertTrue("Wrong taxi selected ", taxis.get(2).getRegistrationNum().equals(taxi.getRegistrationNum()));		
 	}
@@ -85,7 +86,7 @@ public class DataQueueTest {
 	@Test
 	public void testAssignTaxi() {
 		
-		queue.assignTaxi(taxis.get(2));System.out.print(queue.getTaxiQueue());
+		queue.assignTaxi(taxis.get(2));
 		assertTrue("Taxi has not been assigned ", queue.getTaxis().size() == 2);
 		for(Taxi taxi : queue.getTaxis())
 		{
@@ -101,17 +102,28 @@ public class DataQueueTest {
 	public void testGetTaxiQueue() {
 		
 		String output = queue.getTaxiQueue();
+		
+		System.out.print("yyyyyyyyy\n" +output);
+		
 		assertNotNull("No Taxi queue returned ", output);
-		assertTrue("Wrong taxi queue returned ", output.equals("Taxis Queue (3)\n\nHJJDHJD\nUDSUSJ\nJKKJH\n"));
+		assertTrue("Wrong taxi queue returned ", output.equals(" REMAINING (3)\n\n Destination         Passenger(s)" +
+																" -----------         ------------" +
+																" Sharjah             3  " +
+																" Dubai               5  " +
+																" Abu Dhabi           4  "));
 	}
 
 	/**
-	 * Test method for getPassengerQueue
+	 * Test method for getPassengerGroupsQueue
 	 */
 	@Test
-	public void testGetPassengerQueue() {
+	public void testGetPassengerGroupsQueue() {
 		
-		String output = queue.getPassengerQueue();
+		String output = queue.getPassengerGroupsQueue();
+		
+		
+		System.out.print(output);
+		
 		assertNotNull("No Passenger queue returned ", output);
 		assertTrue("Wrong Passenger queue returned ", output.equals("Passengers Queue (3)\n\nSharjah   3\nDubai   5\nAbu Dhabi   4\n"));
 	}
@@ -121,13 +133,13 @@ public class DataQueueTest {
 	 */
 	private void initializeTestData()
 	{
-		passengers.add(new Passenger("Sharjah", 3));		
-		passengers.add(new Passenger("Dubai", 5));
-		passengers.add(new Passenger("Abu Dhabi", 4));
+		passengers.add(new PassengerGroup("Sharjah", 3));		
+		passengers.add(new PassengerGroup("Dubai", 5));
+		passengers.add(new PassengerGroup("Abu Dhabi", 4));
 		taxis.add(new Taxi("HJJDHJD", 4));		
 		taxis.add(new Taxi("UDSUSJ", 3));
 		taxis.add(new Taxi("JKKJH", 5));
 		queue.setTaxis(new LinkedList<Taxi>(taxis));
-		queue.setPassengers(new LinkedList<Passenger>(passengers));
+		queue.setPassengers(new LinkedList<PassengerGroup>(passengers));
 	}
 }

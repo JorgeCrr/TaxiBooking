@@ -1,5 +1,5 @@
 /**
- * 
+ * Observer class of the Observer pattern
  */
 package com.example.taxibooking.interfaces;
 
